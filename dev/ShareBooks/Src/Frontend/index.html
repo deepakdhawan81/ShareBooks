@@ -1,81 +1,25 @@
-﻿<!DOCTYPE html>
-<html ng-app="ShareBooks">
-<head>
-    <title></title>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-    <base href="/">
-    <!--Basic Styles-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="assets/css/weather-icons.min.css" rel="stylesheet" />
-
-    <!--Fonts-->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <!--Beyond styles-->
-    <link id="beyond-link" href="assets/css/beyond.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/demo.min.css" rel="stylesheet" />
-    <link href="assets/css/typicons.min.css" rel="stylesheet" />
-    <link href="assets/css/animate.min.css" rel="stylesheet" />
-
-    <!--Angular Script: Place this script in head to load scripts for angular-->
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-route.min.js"></script>
-        <script src="app.js"></script>
-    <script src="config.js"></script>
-    <script src="app/controllers/accountController.js"></script>
-    <script src="app/directives/account/loginDirective.js"></script>
-</head>
-<body>
-
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="navbar-container">
-                <!-- Navbar Barnd -->
-                <div class="navbar-header pull-left">
-                    <a href="/" class="navbar-brand">
-                        <small>
-                            <img src="assets/img/logo.png" alt="" />
-                        </small>
-                    </a>
-                </div>
-                <!-- /Navbar Barnd -->
-                <!-- Account Area and Settings --->
-                <div class="navbar-header pull-right">
-                    <div class="navbar-account">
-                        <ul class="account-area">
-                            <li>
-                                <a href="account/login">Login</a>
-                            </li>
-
-                        </ul>
-
-
-                    </div>
-                </div>
-                <!-- /Account Area and Settings -->
-            </div>
-        </div>
-    </div>
-    <!-- /Navbar -->
-    <!-- Main Container -->
-    <div class="main-container container-fluid">
-        <!-- Page Container -->
-        <div class="page-container">
-            <ng-view></ng-view>
-
-        </div>
-        <!-- /Page Container -->
-        <!-- Main Container -->
-
-    </div>
-
-    <!--Basic Scripts-->
-    <script src="Scripts/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="Scripts/jquery-3.1.1.slim.js"></script>
-</body>
+<html>
+  <head>
+    <title>Angular QuickStart JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfill -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/@angular/core/bundles/core.umd.js"></script>
+    <script src="node_modules/@angular/common/bundles/common.umd.js"></script>
+    <script src="node_modules/@angular/compiler/bundles/compiler.umd.js"></script>
+    <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
+    <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
+    <!-- 2. Load our 'modules' -->
+    <script src='app/app.component.js'></script>
+    <script src='app/app.module.js'></script>
+    <script src='app/main.js'></script>
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
 </html>
