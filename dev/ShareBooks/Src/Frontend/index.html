@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<base href="/">
+  <script src="assets/material.min.js"></script>
+  <link rel="stylesheet" href="assets/material.deep_orange-pink.min.css">
+  <link rel="stylesheet" href="assets/sprite-av-white.css">
+  <link rel="stylesheet" href="assets/animate.css">
+  <link rel="stylesheet" href="assets/app.css">
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="https://npmcdn.com/core-js/client/shim.min.js"></script>
+
+  <script src="https://npmcdn.com/zone.js@0.6.26?main=browser"></script>
+  <script src="https://npmcdn.com/reflect-metadata@0.1.8"></script>
+  <script src="https://npmcdn.com/systemjs@0.19.40/dist/system.src.js"></script>
+</head>
+
+<body>
+  <shareBooks-app>Loading...</shareBooks-app>
+
+  <script>
+    System.import('systemjs.config.js').then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+  </script>
+</body>
+
+</html>
