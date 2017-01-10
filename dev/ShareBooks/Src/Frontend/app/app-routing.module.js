@@ -10,20 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var page_not_found_component_1 = require('./page-not-found.component');
-/***************************************************************
-* Lazy Loading to Eager Loading
-*
-* 1. Remove the module and NgModule imports in `app.module.ts`
-*
-* 2. Remove the lazy load route from `app.routing.ts`
-*
-* 3. Change the module's default route path from '' to 'pathname'
-*****************************************************************/
 var routes = [
-    { path: '', pathMatch: 'full', redirectTo: '/dashboard', },
-    { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
-    { path: '**', pathMatch: 'full', component: page_not_found_component_1.PageNotFoundComponent },
+    { path: '', pathMatch: 'full', redirectTo: 'home', },
+    { path: 'home', loadChildren: 'app/home/home.module#HomeModule' }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

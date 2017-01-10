@@ -9,31 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var MenuItem = (function () {
-    function MenuItem(caption, link) {
-        this.caption = caption;
-        this.link = link;
+var home_routing_module_1 = require('./home-routing.module');
+var HomeModule = (function () {
+    function HomeModule() {
     }
-    return MenuItem;
-}());
-var NavComponent = (function () {
-    function NavComponent() {
-    }
-    NavComponent.prototype.ngOnInit = function () {
-        this.menuItems = [
-            { caption: 'Home', link: ['/home'] },
-            { caption: 'Login', link: ['/login'] },
-        ];
-    };
-    NavComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'kickOn-nav',
-            templateUrl: 'nav.component.html'
+    HomeModule = __decorate([
+        core_1.NgModule({
+            imports: [home_routing_module_1.HomeRoutingModule],
+            declarations: [home_routing_module_1.routedComponents]
         }), 
         __metadata('design:paramtypes', [])
-    ], NavComponent);
-    return NavComponent;
+    ], HomeModule);
+    return HomeModule;
 }());
-exports.NavComponent = NavComponent;
-//# sourceMappingURL=nav.component.js.map
+exports.HomeModule = HomeModule;
+//# sourceMappingURL=home.module.js.map

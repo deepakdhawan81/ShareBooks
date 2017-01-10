@@ -15,8 +15,8 @@ var PageNotFoundComponent = (function () {
     PageNotFoundComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'story-404',
-            template: "\n    <article class=\"template animated slideInRight\">\n      <h4>Inconceivable!</h4>\n      <div>I do not think this page is where you think it is.</div>\n    </article>\n  "
+            selector: 'kickOn-404',
+            template: "\n    <article>\n      <h4>Inconceivable!</h4>\n      <div>I do not think this page is where you think it is.</div>\n    </article>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], PageNotFoundComponent);

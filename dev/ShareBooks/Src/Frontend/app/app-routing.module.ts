@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 
-import { PageNotFoundComponent } from './page-not-found.component';
+//import { PageNotFoundComponent } from './page-not-found.component';
 
 /***************************************************************
 * Lazy Loading to Eager Loading
@@ -13,9 +13,9 @@ import { PageNotFoundComponent } from './page-not-found.component';
 * 3. Change the module's default route path from '' to 'pathname'
 *****************************************************************/
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/dashboard', },
-  { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
-  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'home', },
+  { path: 'home', loadChildren: 'app/home/home.module#HomeModule' }
+  // { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
 @NgModule({
@@ -25,3 +25,6 @@ const routes: Routes = [
   ]
 })
 export class AppRoutingModule { }
+
+
+ 

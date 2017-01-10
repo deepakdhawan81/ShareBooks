@@ -1,11 +1,10 @@
-<header class="mdl-layout__header">
-  <div class="mdl-layout__header-row">
-    <a class="md-title-icon" href="/dashboard"><i></i></a>
-    <span class="mdl-layout-title">Share Books</span>
-    </div>
-  <div class="mdl-navigation">
-    <a *ngFor="let item of menuItems" [routerLink]="item.link" class="nav-link" routerLinkActive="router-link-active" href="">{{item.caption}}</a>
+<header >
+  <div >
+    <a  href="/"><i></i></a>
+    <span >KickOn</span>
+    
+  </div>
+  <div >
+    <a *ngFor="let item of menuItems" [routerLink]="item.link" routerLinkActive="router-link-active" href="">{{item.caption}}</a>
   </div>
 </header>
-
-

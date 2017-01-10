@@ -9,31 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var MenuItem = (function () {
-    function MenuItem(caption, link) {
-        this.caption = caption;
-        this.link = link;
+var router_1 = require('@angular/router');
+var home_component_1 = require('./home.component');
+var routes = [
+    { path: '', component: home_component_1.HomeComponent, data: { title: 'Kick On -- Start' } },
+];
+var HomeRoutingModule = (function () {
+    function HomeRoutingModule() {
     }
-    return MenuItem;
-}());
-var NavComponent = (function () {
-    function NavComponent() {
-    }
-    NavComponent.prototype.ngOnInit = function () {
-        this.menuItems = [
-            { caption: 'Home', link: ['/home'] },
-            { caption: 'Login', link: ['/login'] },
-        ];
-    };
-    NavComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'kickOn-nav',
-            templateUrl: 'nav.component.html'
+    HomeRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [router_1.RouterModule.forChild(routes)],
+            exports: [router_1.RouterModule],
         }), 
         __metadata('design:paramtypes', [])
-    ], NavComponent);
-    return NavComponent;
+    ], HomeRoutingModule);
+    return HomeRoutingModule;
 }());
-exports.NavComponent = NavComponent;
-//# sourceMappingURL=nav.component.js.map
+exports.HomeRoutingModule = HomeRoutingModule;
+exports.routedComponents = [home_component_1.HomeComponent];
+//# sourceMappingURL=home-routing.module.js.map

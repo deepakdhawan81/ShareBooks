@@ -6,8 +6,12 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
+    "removeComments": true,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true
-  }
+  }, "exclude": [
+"node_modules",
+"dist/",
+"scripts"
+]
 }

@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'shareBooks-app',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  selector: 'kickOn-app',
+  templateUrl: 'app.component.html'
 })
 export class AppComponent { }
-
- 

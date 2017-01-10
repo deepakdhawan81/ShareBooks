@@ -15,9 +15,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'shareBooks-app',
-            templateUrl: 'app.component.html',
-            styleUrls: ['app.component.css']
+            selector: 'kickOn-app',
+            templateUrl: 'app.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
