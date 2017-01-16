@@ -10,16 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var routes = [
+var page_not_found_component_1 = require('./page-not-found.component');
+var appRoutes = [
     { path: '', pathMatch: 'full', redirectTo: 'home', },
-    { path: 'home', loadChildren: 'app/home/home.module#HomeModule' }
+    { path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
+    { path: '**', pathMatch: 'full', component: page_not_found_component_1.PageNotFoundComponent },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(routes, { preloadingStrategy: router_1.PreloadAllModules })],
+            imports: [router_1.RouterModule.forRoot(appRoutes, { preloadingStrategy: router_1.PreloadAllModules })],
             exports: [router_1.RouterModule],
             providers: []
         }), 
