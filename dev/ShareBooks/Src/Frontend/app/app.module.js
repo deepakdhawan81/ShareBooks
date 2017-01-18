@@ -15,12 +15,14 @@ var app_routing_module_1 = require('./app-routing.module');
 var app_component_1 = require('./app.component');
 var page_not_found_component_1 = require('./page-not-found.component');
 var core_module_1 = require('./core/core.module');
+var login_module_1 = require('./login/login.module');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule,
+                login_module_1.LoginModule,
                 app_routing_module_1.AppRoutingModule,
                 core_module_1.CoreModule,],
             declarations: [app_component_1.AppComponent, page_not_found_component_1.PageNotFoundComponent],

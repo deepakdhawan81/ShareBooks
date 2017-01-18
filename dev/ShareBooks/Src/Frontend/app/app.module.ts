@@ -7,9 +7,10 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PageNotFoundComponent } from './page-not-found.component';
 /* Feature Modules */
 import { CoreModule } from './core/core.module';
-
+import { LoginModule } from './login/login.module';
 @NgModule({
   imports: [BrowserModule,HttpModule,
+   LoginModule,
    // Routes get loaded in order. It is important that login
     // come before AppRoutingModule, as
     // AppRoutingModule defines the catch-all ** route

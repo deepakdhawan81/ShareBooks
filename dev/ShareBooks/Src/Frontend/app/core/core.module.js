@@ -15,20 +15,26 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
 var router_1 = require('@angular/router');
+var exception_service_1 = require('./exception.service');
+var message_service_1 = require('./message.service');
 var nav_component_1 = require('./nav/nav.component');
+var module_import_guard_1 = require('./module-import-guard');
+var toast_module_1 = require('./toast/toast.module');
 var CoreModule = (function () {
     function CoreModule(parentModule) {
+        module_import_guard_1.throwIfAlreadyLoaded(parentModule, 'CoreModule');
     }
     CoreModule = __decorate([
         core_1.NgModule({
             imports: [
-                common_1.CommonModule, forms_1.FormsModule, router_1.RouterModule
+                common_1.CommonModule, forms_1.FormsModule, router_1.RouterModule, toast_module_1.ToastModule
             ],
             exports: [
-                common_1.CommonModule, forms_1.FormsModule, router_1.RouterModule, [nav_component_1.NavComponent]
+                common_1.CommonModule, forms_1.FormsModule, router_1.RouterModule, toast_module_1.ToastModule, [nav_component_1.NavComponent]
             ],
             declarations: [nav_component_1.NavComponent],
-            providers: []
+            providers: [exception_service_1.ExceptionService,
+                message_service_1.MessageService]
         }),
         __param(0, core_1.Optional()),
         __param(0, core_1.SkipSelf()), 

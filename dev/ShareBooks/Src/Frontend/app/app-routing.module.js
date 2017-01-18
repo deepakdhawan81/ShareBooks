@@ -10,6 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var auth_guard_service_1 = require('./core/auth-guard.service');
+var can_deactivate_guard_service_1 = require('./core/can-deactivate-guard.service');
+var SessionService_1 = require('./core/SessionService');
 var page_not_found_component_1 = require('./page-not-found.component');
 var appRoutes = [
     { path: '', pathMatch: 'full', redirectTo: 'home', },
@@ -23,7 +26,9 @@ var AppRoutingModule = (function () {
         core_1.NgModule({
             imports: [router_1.RouterModule.forRoot(appRoutes, { preloadingStrategy: router_1.PreloadAllModules })],
             exports: [router_1.RouterModule],
-            providers: []
+            providers: [auth_guard_service_1.AuthGuard,
+                can_deactivate_guard_service_1.CanDeactivateGuard,
+                SessionService_1.SessionService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppRoutingModule);

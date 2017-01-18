@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
-
+import { AuthGuard } from './core/auth-guard.service';
+import { CanDeactivateGuard } from './core/can-deactivate-guard.service';
+import { SessionService } from './core/SessionService';
 import { PageNotFoundComponent } from './page-not-found.component';
 
 /***************************************************************
@@ -21,7 +23,9 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule],
-  providers: [ ]
+  providers: [AuthGuard,
+    CanDeactivateGuard,
+    SessionService ]
 })
 export class AppRoutingModule { }
 
