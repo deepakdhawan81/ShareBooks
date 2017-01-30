@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PageNotFoundComponent } from './page-not-found.component';
+import './core/rxjs-extensions';
 /* Feature Modules */
 import { CoreModule } from './core/core.module';
 import { LoginModule } from './login/login.module';
